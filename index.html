@@ -52,12 +52,42 @@
 </nav>
 
 <!-- Hero Section -->
-<header class="text-center text-white d-flex align-items-center" style="height:100vh; background: linear-gradient(to right, #007acc, #00bcd4);">
-  <div class="container">
-    <h1 class="display-3 fw-bold">Hi, I'm Chung En Liu</h1>
-    <p class="lead">Computer Science Graduate | System & Network Enthusiast | AI Learner</p>
+<header class="d-flex align-items-center justify-content-center"
+        style="height:100vh; background-color:#000; color:#fff; font-family:'Courier New', monospace;">
+  <div class="container text-center">
+    <h1 class="fw-bold">
+      <span id="typed"></span><span class="cursor">|</span>
+    </h1>
+    <p class="lead mt-3">> Computer Science Graduate | System & Network Enthusiast | AI Learner</p>
   </div>
 </header>
+
+<!-- Typed.js Library -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  new Typed('#typed', {
+    strings: [
+      "Hi, I'm Chung En Liu",
+    ],
+    typeSpeed: 50,     // 打字速度
+    showCursor: false, // 關閉 Typed.js 內建游標
+    loop: false,       // 不循環
+    backSpeed: 0,      // 不刪除
+  });
+</script>
+
+<!-- Blinking Cursor CSS -->
+<style>
+  .cursor {
+    display: inline-block;
+    margin-left: 5px;
+    animation: blink 0.8s infinite;
+  }
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+</style>
 
 <!-- About Section -->
 <section id="about">
